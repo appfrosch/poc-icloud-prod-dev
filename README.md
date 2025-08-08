@@ -24,8 +24,15 @@ Differences are:
   - uses a separate AppIcon other than the debug one
   - uses the `Production` environment of above mentioned iCloud container
   
-## Todo-List
-- [X] create sep. app icons for debug and release
+### ACL on iCloud containers
+There is a setting for bundle identifiers in the "Edit your App ID Configuration"
+on developers.apple.com  ([Link](https://developer.apple.com/account/resources/identifiers/list)).
+
+How to get there:
+1. click on above link to see your list of identifiers
+2. search for the bundle id you'd like to check
+3. in the identifier's detail page, scroll down to the "iCloud" section" and click the "Edit" button
+4. in the "iCloud Container Assignment" detail sheet, make sure that the correct iCloud container is checked 
 
 ## Issue and open questions
 ### "Permission Failure"
@@ -44,3 +51,17 @@ op = CBDA290480B8DCFA;
 uuid = 1AB5ECEB-37ED-4DDB-8920-BF48B291938B; 
 container ID = "iCloud.ch.appfros.ch.poc-icloud-prod-dev">
 ```
+
+This is despite the fact that I have checked the "iCloud Container Assignment" 
+for both of my bundle identifiers and they are both correctly set.
+Which of my settings and / or assumptions are falling short here?
+
+### Usage `com.apple.developer.icloud-container-environment`
+Is this the right way to decide which environment is being talked to from 
+which scheme when connecting with the iCloud container?
+
+From what I've seen, this seems to be the case …
+
+### Who's problem is this?
+So far, I think this issue is not [SharingGRDB](https://github.com/pointfreeco/sharing-grdb/tree/cloudkit) related.
+I can't be sure though–unless I try this approach with vanilla `CoreData` …
