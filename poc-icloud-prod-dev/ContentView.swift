@@ -5,6 +5,7 @@
 //  Created by Andreas Seeger on 08.08.2025.
 //
 
+import SharingGRDB
 import SwiftUI
 
 struct ContentView: View {
@@ -21,4 +22,10 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+
+@Table
+struct Item: Identifiable {
+  let id: UUID
 }
