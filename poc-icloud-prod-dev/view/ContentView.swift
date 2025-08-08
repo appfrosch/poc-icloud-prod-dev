@@ -10,13 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-    VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("Hello, world!")
+    NavigationStack {
+      Form {
+        Section("Bundle ID") {
+        Text("\(Bundle.main.bundleIdentifier ?? "Unknown")")
+      }
     }
-    .padding()
+      .navigationTitle("Debug and Release with iCloud App")
+      .navigationBarTitleDisplayMode(.inline)
+    }
   }
 }
 
