@@ -6,9 +6,7 @@
 //
 
 import Foundation
-import SharingGRDB
 
-@Table
 struct Item: Identifiable {
   let id: UUID
 

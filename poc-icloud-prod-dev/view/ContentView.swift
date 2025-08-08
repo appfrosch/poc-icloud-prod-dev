@@ -5,12 +5,10 @@
 //  Created by Andreas Seeger on 08.08.2025.
 //
 
-import SharingGRDB
 import SwiftUI
 
 struct ContentView: View {
-  @Dependency(\.defaultDatabase) var database
-  @FetchAll var items: [Item]
+  var items: [Item] = []
 
   var body: some View {
     NavigationStack {
@@ -50,31 +48,15 @@ struct ContentView: View {
 
   var addItemButton: some View {
     Button("Add item", systemImage: "plus") {
-      withErrorReporting {
-        try database.write { db in
-          try Item.insert { Item() }
-            .execute(db)
-        }
-      }
+
     }
   }
 
   func deleteItems(at offsets: IndexSet) {
-    for index in offsets {
-      withErrorReporting {
-        try database.write { db in
-          try Item.delete(items[index])
-            .execute(db)
-        }
-      }
-    }
+
   }
 }
 
 #Preview {
-  let _ = prepareDependencies {
-    $0.defaultDatabase = try! AppDatabase.setup()
-  }
-
   ContentView()
 }

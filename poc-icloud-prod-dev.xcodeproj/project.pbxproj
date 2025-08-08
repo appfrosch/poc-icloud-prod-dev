@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B6A644E2E45F685001A8E12 /* SharingGRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 5B6A644D2E45F685001A8E12 /* SharingGRDB */; };
 		5B6A64E82E462C27001A8E12 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B6A64E72E462C27001A8E12 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B6A644E2E45F685001A8E12 /* SharingGRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +91,6 @@
 			);
 			name = "poc-icloud-prod-dev";
 			packageProductDependencies = (
-				5B6A644D2E45F685001A8E12 /* SharingGRDB */,
 			);
 			productName = "poc-icloud-prod-dev";
 			productReference = 5B6A643E2E45F653001A8E12 /* poc-icloud-prod-dev.app */;
@@ -124,7 +121,6 @@
 			mainGroup = 5B6A64352E45F653001A8E12;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				5B6A644C2E45F685001A8E12 /* XCRemoteSwiftPackageReference "sharing-grdb" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5B6A643F2E45F653001A8E12 /* Products */;
@@ -367,25 +363,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5B6A644C2E45F685001A8E12 /* XCRemoteSwiftPackageReference "sharing-grdb" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/sharing-grdb";
-			requirement = {
-				branch = cloudkit;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5B6A644D2E45F685001A8E12 /* SharingGRDB */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5B6A644C2E45F685001A8E12 /* XCRemoteSwiftPackageReference "sharing-grdb" */;
-			productName = SharingGRDB;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B6A64362E45F653001A8E12 /* Project object */;
 }
