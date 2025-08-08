@@ -25,7 +25,7 @@ class CoreDataStack: ObservableObject {
         
         // Configure CloudKit
         description.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(
-            containerIdentifier: "iCloud.ch.appfros.ch.poc-icloud-prod-dev"
+            containerIdentifier: "iCloud.ch.appfros.poc-icloud-prod-dev"
         )
         
         container.loadPersistentStores { _, error in
