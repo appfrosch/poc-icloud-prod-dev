@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5B6A64E82E462C27001A8E12 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B6A64E72E462C27001A8E12 /* README.md */; };
+		5B6A650A2E4648AC001A8E12 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6A65082E4648AC001A8E12 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B6A643E2E45F653001A8E12 /* poc-icloud-prod-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-icloud-prod-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6A64E72E462C27001A8E12 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5B6A65092E4648AC001A8E12 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -55,6 +57,7 @@
 		5B6A64352E45F653001A8E12 = {
 			isa = PBXGroup;
 			children = (
+				5B6A65082E4648AC001A8E12 /* DataModel.xcdatamodeld */,
 				5B6A64402E45F653001A8E12 /* poc-icloud-prod-dev */,
 				5B6A643F2E45F653001A8E12 /* Products */,
 				5B6A64E72E462C27001A8E12 /* README.md */,
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6A650A2E4648AC001A8E12 /* DataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +367,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5B6A65082E4648AC001A8E12 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5B6A65092E4648AC001A8E12 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 5B6A65092E4648AC001A8E12 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5B6A64362E45F653001A8E12 /* Project object */;
 }

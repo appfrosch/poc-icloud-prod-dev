@@ -14,7 +14,7 @@ Since you have no existing data and aren't using special GRDB features, this is 
    - `name` (String)
    - `createdAt` (Date)
    - `id` (UUID)
-3. **Enable CloudKit**: Select entity → Data Model Inspector → Check "Used with CloudKit"
+3. **Enable CloudKit**: Select entity → **File Inspector** → Check "Used with SwiftData" (this enables CloudKit compatibility)
 4. **Generate Classes**: Select entity → Data Model Inspector → Codegen: "Class Definition"
 
 ## Step 3: Create CoreData Stack
