@@ -27,9 +27,3 @@ struct ContentView: View {
 
   ContentView()
 }
-
-
-@Table
-struct Item: Identifiable {
-  let id: UUID
-}
