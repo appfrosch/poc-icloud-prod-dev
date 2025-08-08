@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5B6A644E2E45F685001A8E12 /* SharingGRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 5B6A644D2E45F685001A8E12 /* SharingGRDB */; };
+		5B6A64E82E462C27001A8E12 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B6A64E72E462C27001A8E12 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B6A643E2E45F653001A8E12 /* poc-icloud-prod-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poc-icloud-prod-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6A64E72E462C27001A8E12 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -52,6 +54,7 @@
 			children = (
 				5B6A64402E45F653001A8E12 /* poc-icloud-prod-dev */,
 				5B6A643F2E45F653001A8E12 /* Products */,
+				5B6A64E72E462C27001A8E12 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6A64E82E462C27001A8E12 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
