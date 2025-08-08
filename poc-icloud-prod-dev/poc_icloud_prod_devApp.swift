@@ -11,12 +11,16 @@ import SwiftUI
 @main
 struct poc_icloud_prod_devApp: App {
   init() {
-    prepareDependencies {
-      $0.defaultDatabase = try! AppDatabase.setup()
-      $0.defaultSyncEngine = try! SyncEngine(
-        for: $0.defaultDatabase,
-        tables: Item.self
-      )
+    prepareDependencies { dependency in
+      withErrorReporting {
+        dependency.defaultDatabase = try AppDatabase.setup()
+      }
+      withErrorReporting {
+        dependency.defaultSyncEngine = try SyncEngine(
+          for: dependency.defaultDatabase,
+          tables: Item.self
+        )
+      }
     }
   }
     var body: some Scene {
