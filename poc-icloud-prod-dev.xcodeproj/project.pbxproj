@@ -35,6 +35,11 @@
 			path = "poc-icloud-prod-dev";
 			sourceTree = "<group>";
 		};
+		5B6A65022E463C64001A8E12 /* README.assets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = README.assets;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,7 @@
 				5B6A64402E45F653001A8E12 /* poc-icloud-prod-dev */,
 				5B6A643F2E45F653001A8E12 /* Products */,
 				5B6A64E72E462C27001A8E12 /* README.md */,
+				5B6A65022E463C64001A8E12 /* README.assets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +89,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				5B6A64402E45F653001A8E12 /* poc-icloud-prod-dev */,
+				5B6A65022E463C64001A8E12 /* README.assets */,
 			);
 			name = "poc-icloud-prod-dev";
 			packageProductDependencies = (
