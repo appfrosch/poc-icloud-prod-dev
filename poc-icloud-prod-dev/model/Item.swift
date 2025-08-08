@@ -11,4 +11,10 @@ import SharingGRDB
 @Table
 struct Item: Identifiable {
   let id: UUID
+
+  init(
+    id: UUID = UUID()
+  ) {
+    self.id = id
+  }
 }
