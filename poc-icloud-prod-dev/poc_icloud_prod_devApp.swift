@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct poc_icloud_prod_devApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  let coreDataStack = CoreDataStack.shared
+
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .environment(\.managedObjectContext, coreDataStack.container.viewContext)
     }
+  }
 }

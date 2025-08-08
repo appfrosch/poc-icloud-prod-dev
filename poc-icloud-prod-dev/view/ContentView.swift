@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-  var items: [Item] = []
+  @Environment(\.managedObjectContext) private var context
+  @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Item.id, ascending: true)])
+  private var items: FetchedResults<Item>
 
   var body: some View {
     NavigationStack {
@@ -24,10 +26,9 @@ struct ContentView: View {
               addItemButton
                 .labelStyle(.titleAndIcon)
             }
-
           } else {
             ForEach(items) { item in
-              Text(item.id.uuidString)
+              Text(item.id?.uuidString ?? "Unknown")
                 .font(.caption)
             }
             .onDelete(perform: deleteItems)
@@ -40,20 +41,25 @@ struct ContentView: View {
               .labelStyle(.iconOnly)
           }
         }
+        .navigationTitle("Debug and Release with iCloud App")
+        .navigationBarTitleDisplayMode(.inline)
       }
-      .navigationTitle("Debug and Release with iCloud App")
-      .navigationBarTitleDisplayMode(.inline)
     }
   }
 
   var addItemButton: some View {
     Button("Add item", systemImage: "plus") {
-
+      let newItem = Item(context: context)
+      newItem.id = UUID()
+      CoreDataStack.shared.save()
     }
   }
 
   func deleteItems(at offsets: IndexSet) {
-
+    withAnimation {
+      offsets.map { items[$0] }.forEach(context.delete)
+      CoreDataStack.shared.save()
+    }
   }
 }
 

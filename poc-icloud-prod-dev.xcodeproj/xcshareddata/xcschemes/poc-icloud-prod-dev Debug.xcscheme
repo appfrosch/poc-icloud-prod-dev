@@ -50,6 +50,18 @@
             ReferencedContainer = "container:poc-icloud-prod-dev.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "-com.apple.CoreData.CloudKitDebug"
+            value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "-com.apple.CoreData.Logging.stderr"
+            value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
