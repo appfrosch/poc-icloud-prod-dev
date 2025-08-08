@@ -13,6 +13,10 @@ struct poc_icloud_prod_devApp: App {
   init() {
     prepareDependencies {
       $0.defaultDatabase = try! AppDatabase.setup()
+      $0.defaultSyncEngine = try! SyncEngine(
+        for: $0.defaultDatabase,
+        tables: Item.self
+      )
     }
   }
     var body: some Scene {
