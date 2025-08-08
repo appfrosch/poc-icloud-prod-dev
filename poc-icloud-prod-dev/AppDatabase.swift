@@ -61,12 +61,13 @@ enum AppDatabase {
     migrator.registerMigration("v1") { db in
       try #sql(
         """
-        CREATE TABLE "tables" (
+        CREATE TABLE "items" (
           "id" TEXT PRIMARY KEY NOT NULL ON CONFLICT REPLACE DEFAULT (uuid())
         )
         """
       )
       .execute(db)
     }
+    try migrator.migrate(database)
   }
 }
